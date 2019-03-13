@@ -2,20 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rotate : MonoBehaviour
-{
+public class Rotate : MonoBehaviour {
 
-    public float rotationSpeed = 1.0f;
+    public float rotationSpeed = 1.0f; //Velocidade do giro do objeto
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
+        //Gira o objeto em torno do eixo y de acordo com a velocidade configurada
+        //e o tempo entre as chamadas do update()
         transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
     }
 }
